@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,119 +6,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>rRestaurant-copy-RWD</title>
-  <link rel="stylesheet" href="./style/css/style.css">
-
-  <style>
-    /* // 漢堡按鈕 */
-
-    .hamburger {
-      width: 100px;
-      height: 100px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      cursor: pointer;
-      transition:
-        transform 0.3s ease,
-        color 0.3s ease;
-      border: 2px solid rgb(255, 255, 255);
-      padding: 10px;
-      border-radius: 5px;
-    }
-
-    .hamburger span {
-      /* margin: auto; */
-      width: 100%;
-      height: 2px;
-      background-color: #ffffff;
-      transition: background-color 0.3s ease;
-    }
-
-    .hamburger:hover span {
-      background-color: #add206;
-    }
-
-    .hamburger:hover {
-      border: 2px solid #add206;
-    }
-
-    .hamburger span:nth-child(1) {
-      width: 70%;
-      top: 25%;
-      margin: auto;
-      transition: width 0.3s ease;
-    }
-
-    .hamburger span:nth-child(2) {
-      width: 50%;
-      left: 20%;
-      top: 50%;
-      margin: auto;
-      transition: width 0.3s ease;
-    }
-
-    .hamburger span:nth-child(3) {
-      width: 70%;
-      top: 75%;
-      margin: auto;
-      transition: width 0.3s ease;
-    }
-
-    .hamburger:hover span:nth-child(2) {
-      width: 70%;
-      /* left: 10%; */
-    }
-
-    /* 新增的CSS */
-    .menu {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 80%;
-      /* 讓選單占滿左半邊 */
-      height: 100vh;
-      /* 讓選單高度與視窗高度相同 */
-      background-color: rgba(255, 255, 255, 0.9);
-      border: 1px solid #ddd;
-      padding: 10px;
-      border-radius: 0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      z-index: 999;
-      /* 確保選單在最上層 */
-    }
-
-    .show {
-      display: block;
-    }
-
-    .hamburgerq {
-      width: 100px;
-      height: 100px;
-      background-color: #add206;
-      position: relative;
-    }
-
-    .hamburgerq span {
-      position: absolute;
-      /* margin: auto; */
-      width: 100%;
-      height: 2px;
-      background-color: #ffffff;
-      /* transition: background-color 0.3s ease; */
-    }
-  </style>
-
 </head>
 
 <body>
-
-
   <div id="footer"></div>
-
   <script type="module" src="main.js"></script>
-
-
 </body>
 
 </html>
