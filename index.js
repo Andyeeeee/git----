@@ -1,3 +1,3 @@
-import { compoment } from "./js/compoment";
+import { compoment } from "./js/main.js";
 
 export { compoment }
