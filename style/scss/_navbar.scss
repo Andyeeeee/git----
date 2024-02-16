@@ -1,0 +1,224 @@
+#navber {
+  background-color: #0e1721;
+  nav {
+    height: 4rem;
+  }
+  img {
+    width: 150px;
+    padding: 1rem;
+  }
+  a {
+    // color: white;
+    text-decoration: none;
+  }
+
+  button {
+    margin: 1rem;
+    width: 120px;
+    height: 50px;
+    font-style: italic;
+    background-color: #0e1721;
+    border: #ffc989 1px solid;
+    color: #ffc989;
+  }
+
+  //平板大小 最外層
+  .md-out-ul {
+    //最外層第一個 這個設定要放在每個result裡面 這樣才會對應到每個葉免得選項
+
+    //ul 的margim設為0 css全域變數無效 這邊另外多設定一次
+    margin: 0;
+
+    //最外層的每一個
+    //a 遞延的color跑掉 多設定一次
+
+    li::before {
+      width: calc(100% - 16px);
+      left: 8px;
+    }
+    > li {
+      line-height: 4rem;
+      // font-size: 14px;
+      align-items: center;
+      padding: 0px 0px; // color: white;      position: relative;      // cursor: pointer;
+
+      &:hover > ul {
+        display: block !important;
+      }
+      //---------------------------------------第2曾
+      > a {
+        display: block;
+        // background-color: #ffc989;
+        padding: 0 8px;
+      }
+      ul {
+        display: none !important;
+        margin-top: 2rem;
+        padding: 20px 0px;
+        top: 2rem;
+        left: -20px;
+        width: 240px;
+        position: absolute;
+        z-index: 3;
+        background-color: #0e1721;
+        border: 1px solid #ffc989;
+        font-weight: bold;
+
+        //內層業在斜線
+
+        a::before {
+          content: "";
+          position: absolute;
+          left: 20px;
+          width: 0px;
+          height: 2px;
+          top: 50%;
+          background-color: #ffc989;
+          transition: width 0.4s ease;
+        }
+        li {
+          // text-align: start;
+          // padding: 10px 20px;
+          // padding-right: 50px;
+          line-height: 2rem;
+          // padding: 10px;
+          // width: 8rem;
+          // background-color: #ffc989;
+          position: relative;
+          padding-bottom: 0;
+          > a {
+            display: block;
+            padding: 0 20px;
+            transition:
+              padding-left 0.4s ease,
+              color 0.3s ease;
+            // background-color: aqua !important;
+
+            &:hover {
+              padding-left: 50px;
+            }
+            &:hover::before {
+              width: 20px;
+            }
+          }
+
+          &:hover > ul {
+            display: block !important;
+          }
+
+          //第4層
+          ul {
+            position: absolute;
+            margin: 0;
+            left: 239px;
+            top: -21px;
+            display: none !important;
+          }
+        }
+      }
+    }
+    // navbar 上面的線
+    > li::before {
+      top: 22px;
+    }
+  }
+
+  /* // 漢堡按鈕 */
+
+  .hamburger {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition:
+      transform 0.3s ease,
+      color 0.3s ease;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .hamburger span {
+    /* margin: auto; */
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+  }
+
+  .hamburger:hover span {
+    background-color: #ffc989;
+  }
+
+  .hamburger:hover {
+    border: 2px solid #ffc989;
+  }
+
+  .hamburger span:nth-child(1) {
+    width: 70%;
+    top: 25%;
+    margin: auto;
+    transition: width 0.3s ease;
+  }
+
+  .hamburger span:nth-child(2) {
+    width: 50%;
+    left: 20%;
+    top: 50%;
+    margin: auto;
+    transition: width 0.3s ease;
+  }
+
+  .hamburger span:nth-child(3) {
+    width: 70%;
+    top: 75%;
+    margin: auto;
+    transition: width 0.3s ease;
+  }
+
+  .hamburger:hover span:nth-child(2) {
+    width: 70%;
+    /* left: 10%; */
+  }
+
+  /* 新增的CSS */
+  .menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    /* 讓選單占滿左半邊 */
+    height: 100vh;
+    /* 讓選單高度與視窗高度相同 */
+    background-color: #0e1721;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    /* 確保選單在最上層 */
+  }
+
+  .show {
+    display: block;
+  }
+
+  .hamburgerq {
+    width: 100px;
+    height: 100px;
+    background-color: #add206;
+    position: relative;
+  }
+
+  .hamburgerq span {
+    position: absolute;
+    /* margin: auto; */
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    /* transition: background-color 0.3s ease; */
+  }
+}

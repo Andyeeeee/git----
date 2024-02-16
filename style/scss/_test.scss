@@ -1,0 +1,194 @@
+#test {
+  background-color: #0e1721;
+
+  //平板大小 最外層
+  .hover-border-top {
+    > li {
+      // 行高
+      // line-height: 4rem;
+      // font-size: 14px;
+      // align-items: center;
+      // padding: 0px 14px;
+      // color: white;
+      position: relative;
+      cursor: pointer;
+
+      > a {
+        transition: color 0.3s;
+      }
+
+      &:hover::before {
+        border-top: #ffc989 2px solid;
+        transform: translateY(-6px);
+        color: #ffc989;
+      }
+      &:hover > a {
+        color: #ffc989;
+      }
+
+      //---------------------------------------第2曾
+    }
+    // navbar 上面的線
+    > li::before {
+      content: "";
+      position: absolute;
+      width: calc(100% - 28px);
+      height: 100%;
+      border-top: #ffc98900 1px solid;
+      box-sizing: border-box;
+      // top: 22px;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  //平板大小 最外層
+  .hover-border-top-only {
+    > li {
+      // 行高
+      // line-height: 4rem;
+      font-size: 14px;
+      // align-items: center;
+      // padding: 0px 14px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+
+      &:hover::before {
+        border-top: #ffc989 2px solid;
+        transform: translateY(-6px);
+        color: #ffc989;
+      }
+
+      //---------------------------------------第2曾
+    }
+    // navbar 上面的線
+    > li::before {
+      content: "";
+      position: absolute;
+      width: calc(100% - 28px);
+      height: 100%;
+      left: 14px;
+      border-top: #ffc98900 1px solid;
+      box-sizing: border-box;
+      // top: 22px;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  .hover-color-only {
+    > li {
+      > a {
+        transition: color 0.3s;
+      }
+
+      &:hover > a {
+        color: #ffc989;
+      }
+
+      //---------------------------------------第2曾
+    }
+    // navbar 上面的線
+  }
+  //
+  //
+  //
+  //
+  .md-out-ul {
+    //最外層第一個 這個設定要放在每個result裡面 這樣才會對應到每個葉免得選項
+
+    //ul 的margim設為0 css全域變數無效 這邊另外多設定一次
+    margin: 0;
+
+    //最外層的每一個
+    //a 遞延的color跑掉 多設定一次
+
+    > li {
+      line-height: 4rem;
+      font-size: 14px;
+      align-items: center;
+      padding: 0px 0px;
+      // color: white;
+      position: relative;
+      // cursor: pointer;
+
+      &:hover > ul {
+        display: block !important;
+      }
+      //---------------------------------------第2曾
+      > a {
+        display: block;
+        // background-color: #ffc989;
+        padding: 0 14px;
+      }
+      ul {
+        display: none !important;
+        margin-top: 2rem;
+        padding: 20px 0px;
+        top: 2rem;
+        left: -20px;
+        width: 240px;
+        position: absolute;
+        z-index: 1;
+        background-color: #0e1721;
+        border: 1px solid #ffc989;
+        font-weight: bold;
+
+        //內層業在斜線
+
+        li::before {
+          content: "";
+          position: absolute;
+          left: 20px;
+          width: 0px;
+          height: 2px;
+          top: 50%;
+          background-color: #ffc989;
+          transition: width 0.5s ease;
+        }
+        li {
+          // text-align: start;
+          // padding: 10px 20px;
+          // padding-right: 50px;
+          line-height: 2rem;
+          // padding: 10px;
+          // width: 8rem;
+          // background-color: #ffc989;
+          position: relative;
+          padding-bottom: 0;
+          > a {
+            display: block;
+            padding: 0 20px;
+            transition: padding-left 0.5s ease;
+            // background-color: aqua !important;
+
+            &:hover {
+              padding-left: 50px;
+              color: #ffc989;
+            }
+          }
+
+          &:hover::before {
+            width: 20px;
+          }
+
+          &:hover > ul {
+            display: block !important;
+          }
+
+          //第4層
+          ul {
+            position: absolute;
+            margin: 0;
+            left: 239px;
+            top: -21px;
+            display: none !important;
+          }
+        }
+      }
+    }
+    // navbar 上面的線
+    > li::before {
+      top: 22px;
+    }
+  }
+}
