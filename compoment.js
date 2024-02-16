@@ -9,4 +9,4 @@ export function compoment(x, y) {
     })
 }
 
-compoment('../asdssssss/footer.html', 'footer')
+compoment('footer.html', 'footer')
