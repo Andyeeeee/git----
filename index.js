@@ -1,2 +1,2 @@
-import { compoment } from "./qqqqqqqq/compoment.js";
+import { compoment } from "./js/compoment.js";
 export { compoment }
