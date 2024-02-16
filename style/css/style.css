@@ -1,0 +1,422 @@
+@charset "UTF-8";
+:root {
+  margin: 0;
+  background-color: cadetblue;
+}
+
+body {
+  background-color: rgb(14, 23, 33);
+  color: white;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  font-size: 13px;
+  padding-bottom: 15px;
+  color: rgb(208, 208, 208);
+}
+
+p {
+  font-size: 13px;
+  color: rgb(208, 208, 208);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+input {
+  display: none;
+}
+
+.hover-border-top-only > li {
+  color: white;
+  position: relative;
+  cursor: pointer;
+}
+.hover-border-top-only > li:hover::before {
+  border-top: #ffc989 2px solid;
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+  color: #ffc989;
+}
+.hover-border-top-only > li::before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 16px);
+  height: 100%;
+  left: 8px;
+  border-top: rgba(255, 201, 137, 0) 1px solid;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.hover-color-only li a {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.hover-color-only li:hover > a {
+  color: #ffc989 !important;
+}
+
+#footer img {
+  width: 50%;
+}
+#footer .icon img {
+  background-color: white;
+  width: 20px;
+}
+#footer a:hover {
+  color: #ffc989;
+}
+
+#test {
+  background-color: #0e1721;
+}
+#test .hover-border-top > li {
+  position: relative;
+  cursor: pointer;
+}
+#test .hover-border-top > li > a {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+#test .hover-border-top > li:hover::before {
+  border-top: #ffc989 2px solid;
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+  color: #ffc989;
+}
+#test .hover-border-top > li:hover > a {
+  color: #ffc989;
+}
+#test .hover-border-top > li::before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 28px);
+  height: 100%;
+  border-top: rgba(255, 201, 137, 0) 1px solid;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+#test .hover-border-top-only > li {
+  font-size: 14px;
+  color: white;
+  position: relative;
+  cursor: pointer;
+}
+#test .hover-border-top-only > li:hover::before {
+  border-top: #ffc989 2px solid;
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+  color: #ffc989;
+}
+#test .hover-border-top-only > li::before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 28px);
+  height: 100%;
+  left: 14px;
+  border-top: rgba(255, 201, 137, 0) 1px solid;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+#test .hover-color-only > li > a {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+#test .hover-color-only > li:hover > a {
+  color: #ffc989;
+}
+#test .md-out-ul {
+  margin: 0;
+}
+#test .md-out-ul > li {
+  line-height: 4rem;
+  font-size: 14px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 0px;
+  position: relative;
+}
+#test .md-out-ul > li:hover > ul {
+  display: block !important;
+}
+#test .md-out-ul > li > a {
+  display: block;
+  padding: 0 14px;
+}
+#test .md-out-ul > li ul {
+  display: none !important;
+  margin-top: 2rem;
+  padding: 20px 0px;
+  top: 2rem;
+  left: -20px;
+  width: 240px;
+  position: absolute;
+  z-index: 1;
+  background-color: #0e1721;
+  border: 1px solid #ffc989;
+  font-weight: bold;
+}
+#test .md-out-ul > li ul li::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  width: 0px;
+  height: 2px;
+  top: 50%;
+  background-color: #ffc989;
+  -webkit-transition: width 0.5s ease;
+  transition: width 0.5s ease;
+}
+#test .md-out-ul > li ul li {
+  line-height: 2rem;
+  position: relative;
+  padding-bottom: 0;
+}
+#test .md-out-ul > li ul li > a {
+  display: block;
+  padding: 0 20px;
+  -webkit-transition: padding-left 0.5s ease;
+  transition: padding-left 0.5s ease;
+}
+#test .md-out-ul > li ul li > a:hover {
+  padding-left: 50px;
+  color: #ffc989;
+}
+#test .md-out-ul > li ul li:hover::before {
+  width: 20px;
+}
+#test .md-out-ul > li ul li:hover > ul {
+  display: block !important;
+}
+#test .md-out-ul > li ul li ul {
+  position: absolute;
+  margin: 0;
+  left: 239px;
+  top: -21px;
+  display: none !important;
+}
+#test .md-out-ul > li::before {
+  top: 22px;
+}
+
+#navber {
+  background-color: #0e1721;
+  /* // 漢堡按鈕 */
+  /* 新增的CSS */
+}
+#navber nav {
+  height: 4rem;
+}
+#navber img {
+  width: 150px;
+  padding: 1rem;
+}
+#navber a {
+  text-decoration: none;
+}
+#navber button {
+  margin: 1rem;
+  width: 120px;
+  height: 50px;
+  font-style: italic;
+  background-color: #0e1721;
+  border: #ffc989 1px solid;
+  color: #ffc989;
+}
+#navber .md-out-ul {
+  margin: 0;
+}
+#navber .md-out-ul li::before {
+  width: calc(100% - 16px);
+  left: 8px;
+}
+#navber .md-out-ul > li {
+  line-height: 4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 0px;
+}
+#navber .md-out-ul > li:hover > ul {
+  display: block !important;
+}
+#navber .md-out-ul > li > a {
+  display: block;
+  padding: 0 8px;
+}
+#navber .md-out-ul > li ul {
+  display: none !important;
+  margin-top: 2rem;
+  padding: 20px 0px;
+  top: 2rem;
+  left: -20px;
+  width: 240px;
+  position: absolute;
+  z-index: 3;
+  background-color: #0e1721;
+  border: 1px solid #ffc989;
+  font-weight: bold;
+}
+#navber .md-out-ul > li ul a::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  width: 0px;
+  height: 2px;
+  top: 50%;
+  background-color: #ffc989;
+  -webkit-transition: width 0.4s ease;
+  transition: width 0.4s ease;
+}
+#navber .md-out-ul > li ul li {
+  line-height: 2rem;
+  position: relative;
+  padding-bottom: 0;
+}
+#navber .md-out-ul > li ul li > a {
+  display: block;
+  padding: 0 20px;
+  -webkit-transition: padding-left 0.4s ease, color 0.3s ease;
+  transition: padding-left 0.4s ease, color 0.3s ease;
+}
+#navber .md-out-ul > li ul li > a:hover {
+  padding-left: 50px;
+}
+#navber .md-out-ul > li ul li > a:hover::before {
+  width: 20px;
+}
+#navber .md-out-ul > li ul li:hover > ul {
+  display: block !important;
+}
+#navber .md-out-ul > li ul li ul {
+  position: absolute;
+  margin: 0;
+  left: 239px;
+  top: -21px;
+  display: none !important;
+}
+#navber .md-out-ul > li::before {
+  top: 22px;
+}
+#navber .hamburger {
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  -webkit-transition: color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease, -webkit-transform 0.3s ease;
+  border: 2px solid #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+}
+#navber .hamburger span {
+  /* margin: auto; */
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+#navber .hamburger:hover span {
+  background-color: #ffc989;
+}
+#navber .hamburger:hover {
+  border: 2px solid #ffc989;
+}
+#navber .hamburger span:nth-child(1) {
+  width: 70%;
+  top: 25%;
+  margin: auto;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+#navber .hamburger span:nth-child(2) {
+  width: 50%;
+  left: 20%;
+  top: 50%;
+  margin: auto;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+#navber .hamburger span:nth-child(3) {
+  width: 70%;
+  top: 75%;
+  margin: auto;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+#navber .hamburger:hover span:nth-child(2) {
+  width: 70%;
+  /* left: 10%; */
+}
+#navber .menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  /* 讓選單占滿左半邊 */
+  height: 100vh;
+  /* 讓選單高度與視窗高度相同 */
+  background-color: #0e1721;
+  border-right: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 0;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  /* 確保選單在最上層 */
+}
+#navber .show {
+  display: block;
+}
+#navber .hamburgerq {
+  width: 100px;
+  height: 100px;
+  background-color: #add206;
+  position: relative;
+}
+#navber .hamburgerq span {
+  position: absolute;
+  /* margin: auto; */
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  /* transition: background-color 0.3s ease; */
+}
